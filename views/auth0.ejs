@@ -1,0 +1,99 @@
+function showBoxUI(boxAccessToken) {
+    console.log("tok:" + boxAccessToken)
+    $(".view").hide();
+    var folderId = '0';
+    var contentExplorer = new Box.ContentExplorer();
+    contentExplorer.show(folderId, boxAccessToken, {
+        container: '#app-container',
+        logoUrl: 'box'
+    })
+
+    $("#app-container").height(600);
+    console.log("show colla");
+
+    $(".collapsible").show();
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+                content.style.display = "none";
+                $("#userinfo").text("Show user info");
+            } else {
+                content.style.display = "block";
+                $("#userinfo").text("Hide user info");
+            }
+        });
+    }
+    $("#app-container").show();
+    $("#myModal").toggle();
+    $(".load").hide();
+}
+// Operations when the web page is loaded.
+$(document).ready(function() {
+    $("#imagemodal").toggle();
+
+    $("#popreg").on("click", function () {
+        $('#imagepreview').attr('src', '/img/register.png');
+        $('#imagemodal').modal('show'); // imagemodal is the id attribute assigned to the bootstrap modal, then i use the show function
+    });
+    $("#poplog").on("click", function () {
+        $('#imagepreview').attr('src', '/img/login.png');
+        $('#imagemodal').modal('show'); // imagemodal is the id attribute assigned to the bootstrap modal, then i use the show function
+    });
+    $(".tab-pane").hide();;
+    $("#statusNotAuth").hide();
+    $("#statusAuth").hide();
+    $("#signInButton").click( function () {
+         window.location.href='/login';
+    });
+});
+
+
+// Operations when signed in.
+function showSignedIn() {
+    console.log("calling signed out")
+    $("#statusNotAuth").hide();
+    $("#statusAuth").show();
+    $("#signInButton").text("Sign Out");
+}
+
+// Operations when signed out.
+function showSignedOut() {
+    $("#statusNotAuth").show();
+    $("#statusAuth").hide();
+    closeTab("userdetails");
+}
+
+
+<% if (user) { %>
+    $(".view").hide();
+    $(".load").html("<img src='https://pcboxdemo.github.io/load.gif'/>").show();
+    getBoxToken('<%=user.id%>');
+    showSignedIn();
+<%}%>
+
+
+function getBoxToken(userId) {
+    console.log(userId);
+    $.post("/boxUI", { userId: userId }, function (json) {
+        console.log(json);
+        console.log("msg: " + JSON.stringify(json.accessToken));
+        accessToken = json.accessToken;
+        showBoxUI(accessToken);
+        $("#user").append("Auth0 User:" + json.userName).append("<br/>");
+        <% if (user) { %>
+            $("#user").append("Auth0 Email:<%=user.emails[0].value%>").append("<br/>");
+            <%}%>
+
+        $("#user").append("Auth0 ID:" + json.auth0Id).append("<br/>");
+        $("#user").append("Box User ID:" + json.boxId).append("<br/>");
+        $("#user").append("Box external app user ID:" + json.extId).append("<br/>");
+        $("#user").append("Box User Name:" + json.userName).append("<br/>");
+        $("#user").append("Box User Login:" + json.login).append("<br/>");
+        $(".collapsible").show();
+    })
+};

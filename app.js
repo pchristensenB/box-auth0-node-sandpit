@@ -129,7 +129,7 @@ app.post('/boxUI', function (req, res) {
 				boxSession.getAppUserTokens(appUserID.id).then(function(accessToken) {
 					console.log("the access token is: " + accessToken);
 					res.json({
-            accessToken: accessToken.accessToken,
+         				accessToken: accessToken.accessToken,
 						auth0Id:auth0Id,
 						userName:appUserID.name,
 						login:appUserID.login,
@@ -141,6 +141,10 @@ app.post('/boxUI', function (req, res) {
 		})
 
 });
+app.get('/auth0.js', function(req, res) {
+	res.render('auth0', { user: req.user });
+  });
+  
 app.get('/', function(req, res) {
   console.log(req.session);
   res.render('index', { user: req.user });
@@ -172,7 +176,7 @@ app.get("/callback", (req, res, next) => {
 			console.log('We received a return from Auth0. - create here!' + JSON.stringify(user));
 			getAppUserID(user.user_id).then((appuserId) => {
 				if(appuserId=='NOTFOUND') {
-					createAppUser(decoded.oid,decoded.name).then((appUserID) => {
+					createAppUser(user.user_id,user.user_name).then((appUserID) => {
 						console.log("created:" + appUserID);
 						res.redirect('/');
 					})
