@@ -26,7 +26,7 @@
     "hbs": "^4.0.1",
     "http": "0.0.0",
     "jwt-decode": "^2.2.0",
-    "njwt": "^0.4.0",
+    "njwt": "^1.0.0",
     "nodemon": "^2.0.2",
     "nodemonitor": "0.0.1",
     "passport": "^0.4.1",
