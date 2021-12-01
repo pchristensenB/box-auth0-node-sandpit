@@ -15,22 +15,17 @@
   },
   "dependencies": {
     "body-parser": "^1.19.0",
-    "box-node-sdk": "^1.37.0",
+    "box-node-sdk": "^2.0.0",
     "dotenv": "^5.0.1",
-    "ejs": ">= 0.0.0",
-    "ejs-locals": ">= 0.0.0",
+    "ejs": "^3.1.6",
     "express": "^4.17.1",
-    "express-handlebars": "^3.0.0",
-    "express-session": "^1.17.1",
     "fs": "0.0.1-security",
-    "hbs": "^4.0.1",
     "http": "0.0.0",
     "jwt-decode": "^2.2.0",
     "njwt": "^1.0.0",
-    "nodemon": "^2.0.2",
+    "nodemon": "^2.0.15",
     "nodemonitor": "0.0.1",
+    "util": "^0.10.3",
     "passport": "^0.4.1",
-    "passport-auth0": "^1.4.0",
-    "util": "^0.10.3"
-  }
+    "passport-auth0": "^1.4.0"  }
 }
