@@ -22,6 +22,14 @@ You will need both a Auth0 free developer account and a Box account
 1. Create a new JWT Application https://developer.box.com/guides/authentication/jwt/jwt-setup/
 2. Download the json file with the private key
   - This will be downloaded as json file with 12 lines. Remove all line ending to make it a single line
+  
+    From
+
+    (/images/multi.png)
+    
+    To
+    
+    (/images/single.png)
 
 # Setup and run the app
 
@@ -33,6 +41,13 @@ You will need both a Auth0 free developer account and a Box account
   -  AUTH0_CALLBACK_URL=http://localhost:3000/callback
   -  BOX_JWT=..jwt json config in a single line
 
-2. Run the app with 
+2. Install dependencies
+  - npm install
+
+3. Run the app
+  - npm start
+  This should bring up this website on localhost:3000
+  
+  (/images/screen.png)
 
 
