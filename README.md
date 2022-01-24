@@ -63,8 +63,25 @@ You will need both a Auth0 free developer account and a Box account
 3. Run the app
 
     npm start
+
     This should bring up this website on localhost:3000 and you can go through the registration process
   
+    Welcome screen
+    
     ![screen](/images/screen.png)
+    
+    Registration (sign up)
+    
+    ![screen](/images/reg.png)
+    
+    Box folder and user info
+    
+    ![screen](/images/loggedin.png)
+    
+    Folder created as the app user
+    
+    ![screen](/images/folder.png)
+    
+    
 
 
