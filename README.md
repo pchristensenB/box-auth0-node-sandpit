@@ -25,11 +25,11 @@ You will need both a Auth0 free developer account and a Box account
   
     From
 
-    [multi](/images/multi.png)
+    ![multi](/images/multi.png)
     
     To
     
-    [single](/images/single.png)
+    ![single](/images/single.png)
 
 # Setup and run the app
 
@@ -48,6 +48,6 @@ You will need both a Auth0 free developer account and a Box account
   - npm start
   This should bring up this website on localhost:3000
   
-  [screen](/images/screen.png)
+  ![screen](/images/screen.png)
 
 
