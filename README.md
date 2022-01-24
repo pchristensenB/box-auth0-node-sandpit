@@ -3,11 +3,11 @@ This configuration will allow you to use Auth0 as the identity management soluti
 
 Registration flow
 
-<img src="/public/img/register.png" width="50%" height="50%">
+<img src="/public/img/register.png" width="75%" height="75%">
         
 Login flow
 
-<img src="/public/img/login.png" width="50%" height="50%">
+<img src="/public/img/login.png" width="75%" height="75%">
 
 
 # Pre-requisites
