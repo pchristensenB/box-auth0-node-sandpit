@@ -75,7 +75,7 @@ You will need both a Auth0 free developer account and a Box account
     
     <img src="/images/register.png" width="50%" height="50%">
     
-    Box folder and user info
+    User mapping info
     
     <img src="/images/loggedin.png" width="50%" height="50%">    
     
