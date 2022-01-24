@@ -69,7 +69,7 @@ You will need both a Auth0 free developer account and a Box account
   
     Welcome screen
     
-    <img src="/images/screen.png" width="50%" height="50%">
+    <img src="/images/screen.png" width="100%" height="100%">
     
     Registration (sign up)
     
@@ -77,11 +77,11 @@ You will need both a Auth0 free developer account and a Box account
     
     User mapping info
     
-    <img src="/images/loggedin.png" width="50%" height="50%">    
+    <img src="/images/loggedin.png" width="100%" height="100%">    
     
     Folder created as the app user
     
-    <img src="/images/folder.png" width="50%" height="50%">
+    <img src="/images/folder.png" width="100%" height="100%">
     
     
 
