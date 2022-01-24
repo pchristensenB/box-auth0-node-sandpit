@@ -1,4 +1,14 @@
 ## Setup Box app users with Auth0
+This configuration will allow you to use Auth0 as the identity management solution for an demo application that use Box app users to login to Box. This will allow a user to register an email with Auth0 and this will automatically create a Box app user and map it to the Auth0 user. See the below diagrams for details
+
+Registration flow
+
+<img src="/public/img/register.png" width="50%" height="50%">
+        
+Login flow
+
+<img src="/public/img/login.png" width="50%" height="50%">
+
 
 # Pre-requisites
 You will need both a Auth0 free developer account and a Box account
