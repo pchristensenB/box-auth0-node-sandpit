@@ -69,19 +69,19 @@ You will need both a Auth0 free developer account and a Box account
   
     Welcome screen
     
-    <img src="/images/screen.png" width="50%" height="50%">
+    <img src="/images/screen.png" width="75%" height="75%">
     
     Registration (sign up)
     
-    <img src="/images/reg.png" width="50%" height="50%">
+    <img src="/images/register.png" width="75%" height="75%">
     
     Box folder and user info
     
-    <img src="/images/loggedin.png" width="50%" height="50%">    
+    <img src="/images/loggedin.png" width="75%" height="75%">    
     
     Folder created as the app user
     
-    <img src="/images/folder.png" width="50%" height="50%">
+    <img src="/images/folder.png" width="75%" height="75%">
     
     
 
