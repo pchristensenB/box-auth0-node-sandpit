@@ -8,20 +8,19 @@ You will need both a Auth0 free developer account and a Box account
 # Auth0
 
 1. Create a new application
+    Choose 'Regular Web Applications'
   
-  Choose 'Regular Web Applications'
+    Give a name like 'box-auth0-demo' or similar
   
-  Give a name like 'box-auth0-demo' or similar
-  
-  After creation, go to 'Settings'
+    After creation, go to 'Settings'
 
 2. Set allowed URLs
   
-  Add 'http://localhost:3000/callback' to the 'Allowed Callback URLs'
+    Add 'http://localhost:3000/callback' to the 'Allowed Callback URLs'
   
-  Add 'http://localhost:3000' to the 'Allowed Logout URLs'
+    Add 'http://localhost:3000' to the 'Allowed Logout URLs'
   
-  Save changes
+    Save changes
 
 # Box
 
