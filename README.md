@@ -8,20 +8,20 @@ You will need both a Auth0 free developer account and a Box account
 # Auth0
 
 1. Create a new application
-  -  Choose 'Regular Web Applications'
-  -  Give a name like 'box-auth0-demo' or similar
-  -  After creation, go to 'Settings'
+  Choose 'Regular Web Applications'
+  Give a name like 'box-auth0-demo' or similar
+  After creation, go to 'Settings'
 
 2. Set allowed URLs
-  - Add 'http://localhost:3000/callback' to the 'Allowed Callback URLs'
-  - Add 'http://localhost:3000' to the 'Allowed Logout URLs'
-  - Save changes
+  Add 'http://localhost:3000/callback' to the 'Allowed Callback URLs'
+  Add 'http://localhost:3000' to the 'Allowed Logout URLs'
+  Save changes
 
 # Box
 
 1. Create a new JWT Application https://developer.box.com/guides/authentication/jwt/jwt-setup/
 2. Download the json file with the private key
-  - This will be downloaded as json file with 12 lines. Remove all line ending to make it a single line
+   This will be downloaded as json file with 12 lines. Remove all line ending to make it a single line
   
     From
 
