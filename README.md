@@ -46,7 +46,7 @@ You will need both a Auth0 free developer account and a Box account
 
 3. Run the app
   - npm start
-  This should bring up this website on localhost:3000
+  This should bring up this website on localhost:3000 and you can go through the registration process
   
   ![screen](/images/screen.png)
 
