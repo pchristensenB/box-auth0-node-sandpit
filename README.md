@@ -40,12 +40,12 @@ You will need both a Auth0 free developer account and a Box account
   
     From
 
-    <img src="/images/multi.png" width="75%" height="75%">
+    <img src="/images/multi.png" width="50%" height="50%">
 
     
     To
     
-    <img src="/images/single.png" width="75%" height="75%">
+    <img src="/images/single.png" width="50%" height="50%">
 
 # Setup and run the app
 
