@@ -47,12 +47,14 @@ You will need both a Auth0 free developer account and a Box account
   -  BOX_JWT=..jwt json config in a single line
 
 2. Install dependencies
-  - npm install
+
+    npm install
 
 3. Run the app
-  - npm start
-  This should bring up this website on localhost:3000 and you can go through the registration process
+
+    npm start
+    This should bring up this website on localhost:3000 and you can go through the registration process
   
-  ![screen](/images/screen.png)
+    ![screen](/images/screen.png)
 
 
