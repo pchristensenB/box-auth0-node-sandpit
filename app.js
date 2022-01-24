@@ -148,7 +148,7 @@ app.get("/callback", (req, res, next) => {
 			console.log('We received a return from Auth0. - create here if not found -> lazy instantiation' + JSON.stringify(user));
 			getAppUserID(user.user_id).then((appuserId) => {
 				if (appuserId == 'NOTFOUND') {
-					createAppUser(user.user_id, user.user_name).then((appUserID) => {
+					createAppUser(user.user_id, user.displayName).then((appUserID) => {
 						console.log("created:" + appUserID);
 						res.redirect('/');
 					})
