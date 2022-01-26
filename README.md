@@ -1,4 +1,4 @@
-## Setup Box app users with Auth0
+# Setup Box app users with Auth0
 This configuration will allow you to use Auth0 as the identity management solution for an demo application that use Box app users to login to Box. This will allow a user to register an email with Auth0 and this will automatically create a Box app user and map it to the Auth0 user. The app itself consists of a Box UI Element loaded as the app user logged in. 
 
 
@@ -13,12 +13,12 @@ Login flow
 <img src="/public/img/login.png" width="75%" height="75%">
 
 
-# Pre-requisites
+## Pre-requisites
 You will need both a Auth0 free developer account and a Box account
 - Free Auth0 Dev account: https://auth0.com/signup?place=header&type=button&text=sign%20up
 - Free Box Developer account: https://account.box.com/signup/developer
 
-# Auth0
+## Auth0
 
 1. Create a new application
     Choose 'Regular Web Applications'
@@ -35,7 +35,7 @@ You will need both a Auth0 free developer account and a Box account
   
     Save changes
 
-# Box
+## Box
 
 1. Create a new JWT Application https://developer.box.com/guides/authentication/jwt/jwt-setup/
 2. Download the json file with the private key
@@ -50,7 +50,7 @@ You will need both a Auth0 free developer account and a Box account
     
     <img src="/images/single.png" width="50%" height="50%">
 
-# Setup and run the app
+## Setup and run the app
 
 1. Clone this repository and create an '.env' file in the root and add the following key/value pair
   -  AUTH0_CLIENT_ID=..from the settings page of your Auth0 app
