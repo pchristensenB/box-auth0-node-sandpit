@@ -38,7 +38,8 @@ You will need both a Auth0 free developer account and a Box account
 ## Box
 
 1. Create a new JWT Application https://developer.box.com/guides/authentication/jwt/jwt-setup/
-2. Download the json file with the private key
+2. Add http://localhost:3000 to the CORS exceptions in your app configuration
+3. Download the json file with the private key
    This will be downloaded as json file with 12 lines. Remove all line ending to make it a single line
   
     From
