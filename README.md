@@ -1,4 +1,4 @@
-## Setup Box app users with Auth0
+# Setup Box app users with Auth0
 This configuration will allow you to use Auth0 as the identity management solution for an demo application that use Box app users to login to Box. This will allow a user to register an email with Auth0 and this will automatically create a Box app user and map it to the Auth0 user. The app itself consists of a Box UI Element loaded as the app user logged in. 
 
 
@@ -13,12 +13,12 @@ Login flow
 <img src="/public/img/login.png" width="75%" height="75%">
 
 
-# Pre-requisites
+## Pre-requisites
 You will need both a Auth0 free developer account and a Box account
 - Free Auth0 Dev account: https://auth0.com/signup?place=header&type=button&text=sign%20up
 - Free Box Developer account: https://account.box.com/signup/developer
 
-# Auth0
+## Auth0
 
 1. Create a new application
     Choose 'Regular Web Applications'
@@ -35,10 +35,11 @@ You will need both a Auth0 free developer account and a Box account
   
     Save changes
 
-# Box
+## Box
 
 1. Create a new JWT Application https://developer.box.com/guides/authentication/jwt/jwt-setup/
-2. Download the json file with the private key
+2. Add http://localhost:3000 to the CORS exceptions in your app configuration
+3. Download the json file with the private key
    This will be downloaded as json file with 12 lines. Remove all line ending to make it a single line
   
     From
@@ -50,7 +51,7 @@ You will need both a Auth0 free developer account and a Box account
     
     <img src="/images/single.png" width="50%" height="50%">
 
-# Setup and run the app
+## Setup and run the app
 
 1. Clone this repository and create an '.env' file in the root and add the following key/value pair
   -  AUTH0_CLIENT_ID=..from the settings page of your Auth0 app
@@ -87,5 +88,14 @@ You will need both a Auth0 free developer account and a Box account
     <img src="/images/folder.png" width="100%" height="100%">
     
     
+# License
+The MIT License (MIT)
 
+Copyright (c) 2021 Peter Christensen
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
