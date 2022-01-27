@@ -88,7 +88,7 @@ You will need both a Auth0 free developer account and a Box account
     <img src="/images/folder.png" width="100%" height="100%">
     
     
-#License
+# License
 The MIT License (MIT)
 
 Copyright (c) 2021 Peter Christensen
