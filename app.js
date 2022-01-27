@@ -176,7 +176,7 @@ app.get("/logout", (req, res) => {
 	}
 
 	const logoutURL = new URL(
-		`https://${process.env.AUTH0_DOMAIN}/v2/logout`
+		`https://${process.env.AUTH0_DOMAIN}/logout`
 	);
 
 	const searchString = querystring.stringify({
