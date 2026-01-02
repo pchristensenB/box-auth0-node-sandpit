@@ -2,22 +2,12 @@
 
 require('dotenv').config()
 
-const jwtDecode = require('jwt-decode');
-
-const bodyParser = require('body-parser');
-
 const BoxSDK = require('box-node-sdk');
 
 const express = require('express');
 
-const fs = require('fs');
 const path = require('path');
 
-const http = require("https");
-
-const util = require('util');
-
-const request = require('request');
 const querystring = require("querystring");
 
 const expressSession = require("express-session");
@@ -163,32 +153,35 @@ app.get("/callback", (req, res, next) => {
 });
 
 app.get("/logout", (req, res) => {
-	req.logOut();
+	req.logOut((err) => {
+		if (err) {
+			console.error('Logout error:', err);
+			return res.redirect('/');
+		}
 
-	let returnTo = req.protocol + "://" + req.hostname;
-	const port = req.connection.localPort;
+		let returnTo = req.protocol + "://" + req.hostname;
+		const port = req.socket?.localPort || process.env.PORT || 3000;
 
-	if (port !== undefined && port !== 80 && port !== 443) {
-		returnTo =
-			process.env.NODE_ENV === "production"
-				? `${returnTo}/`
-				: `${returnTo}:${port}/`;
-	}
+		if (port !== undefined && port !== 80 && port !== 443) {
+			returnTo =
+				process.env.NODE_ENV === "production"
+					? `${returnTo}/`
+					: `${returnTo}:${port}/`;
+		}
 
-	const logoutURL = new URL(
-		`https://${process.env.AUTH0_DOMAIN}/logout`
-	);
+		const logoutURL = new URL(
+			`https://${process.env.AUTH0_DOMAIN}/logout`
+		);
 
-	const searchString = querystring.stringify({
-		client_id: process.env.AUTH0_CLIENT_ID,
-		returnTo: returnTo
+		const searchString = querystring.stringify({
+			client_id: process.env.AUTH0_CLIENT_ID,
+			returnTo: returnTo
+		});
+		logoutURL.search = searchString;
+
+		res.redirect(logoutURL);
 	});
-	logoutURL.search = searchString;
-
-	res.redirect(logoutURL);
 });
-var jsonParser = bodyParser.json()
-var urlencodedParser = bodyParser.urlencoded({ extended: false });
 
 //Creates the app user
 const createAppUser = (auth0Id, name) => {

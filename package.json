@@ -1,33 +1,30 @@
 {
-  "name": "box-auth0-sandpit",
+  "name": "box-auth0-node-sandpit",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Demo application showing integration with Box Platform app users and Auth0 identity management",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js",
-    "startmon": "nodemon app.js"
+    "start": "node app.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "nodemon": "^2.0.15"
-  },
+  "keywords": [
+    "box",
+    "auth0",
+    "app-users",
+    "express"
+  ],
+  "author": "Peter Christensen",
+  "license": "MIT",
   "dependencies": {
-    "body-parser": "^1.19.0",
-    "box-node-sdk": "^3.4.2",
-    "dotenv": "^5.0.1",
-    "ejs": "^3.1.6",
-    "express": "^4.17.1",
-    "express-session": "^1.17.2",
-    "fs": "0.0.1-security",
-    "http": "0.0.0",
-    "jwt-decode": "^2.2.0",
-    "njwt": "^1.0.0",
-    "nodemonitor": "0.0.1",
-    "passport": "^0.6.0",
-    "passport-auth0": "^1.4.0",
-    "util": "^0.10.3"
+    "box-node-sdk": "^3.8.2",
+    "dotenv": "^17.2.3",
+    "ejs": "^3.1.10",
+    "express": "^5.2.1",
+    "express-session": "^1.18.2",
+    "jwt-decode": "^4.0.0",
+    "passport": "^0.7.0",
+    "passport-auth0": "^1.4.5"
+  },
+  "engines": {
+    "node": ">=18.x"
   }
 }
